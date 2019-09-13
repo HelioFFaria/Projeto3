@@ -1,6 +1,6 @@
 <%-- 
-    Document   : removerRegistro
-    Created on : 12/09/2019, 21:26:50
+    Document   : incluirBanda
+    Created on : 13/09/2019, 04:18:24
     Author     : helio
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Remover Registro</title>
+        <title>Incluir Banda</title>
     </head>
     <body>
-        <h1>Remover</h1>
+        <h1>Incluir Banda</h1>
     </body>
 </html>

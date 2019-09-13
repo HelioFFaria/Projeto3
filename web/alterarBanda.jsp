@@ -1,6 +1,6 @@
 <%-- 
-    Document   : listar
-    Created on : 12/09/2019, 21:24:31
+    Document   : alterarBanda
+    Created on : 12/09/2019, 21:27:13
     Author     : helio
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Listar Registro</title>
+        <title>Alterar Banda</title>
     </head>
     <body>
-        <h1>Listar</h1>
+        <h1>Alterar Banda</h1>
     </body>
 </html>

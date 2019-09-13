@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home
-    Created on : 12/09/2019, 21:04:32
+    Document   : alterarDisco
+    Created on : 12/09/2019, 21:24:31
     Author     : helio
 --%>
 
@@ -9,10 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Alterar Disco</title>
     </head>
     <body>
-        <h1>Listas</h1>
-        <a href="listaDeDiscos.jsp">Lista de Discos</a>
+        <h1>Alterar</h1>
     </body>
 </html>

@@ -4,6 +4,8 @@
     Author     : helio
 --%>
 
+<%@page import="br.com.fatecpg.projeto3.disco" %>
+<%@page import="br.com.fatecpg.projeto3.dbDisco" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +14,24 @@
         <title>Lista de Discos</title>
     </head>
     <body>
-        <h1>Discos</h1>
+        <h1>Lista de Discos</h1>
+        <table border ="1">
+            <tr>
+                <th>Índice</th>
+                <th>Disco</th>
+                <th>Gravadora</th>
+                <th>Data Lançamento</th>
+            </tr>
+            <% for(disco disco: dbDisco.getdisco()){%>
+            <tr>
+                <td><%=dbDisco.getdisco().indexOf(disco)%></td>
+                <td><%=disco.getNomeDisco()%></td>
+                <td><%=disco.getNomeGravadora()%></td>
+                <td><%=disco.getDataDisco()%></td>
+            </tr>
+            <%}%>
+        </table>
+        <a href="incluirDisco.jsp">Incluir Disco</a>
+        <a href="home.jsp">Home</a>
     </body>
 </html>

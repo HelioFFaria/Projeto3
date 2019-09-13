@@ -1,6 +1,6 @@
 <%-- 
-    Document   : incluir
-    Created on : 12/09/2019, 21:25:23
+    Document   : alterarMusica
+    Created on : 13/09/2019, 04:16:48
     Author     : helio
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Incluir Registro</title>
+        <title>Alterar Música</title>
     </head>
     <body>
-        <h1>Incluir</h1>
+        <h1>Alterar Música</h1>
     </body>
 </html>
