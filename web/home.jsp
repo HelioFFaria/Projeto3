@@ -14,5 +14,6 @@
     <body>
         <h1>Listas</h1>
         <a href="listaDeDiscos.jsp">Lista de Discos</a>
+        <a href="listaDeBandas.jsp">Lista de Bandas</a>
     </body>
 </html>
