@@ -12,20 +12,20 @@ import java.util.ArrayList;
  * @author helio
  */
 public class dbDisco {
-    private static ArrayList<disco> discos;
+    private static ArrayList<disco> disco;
     public  static ArrayList<disco> getdisco(){
-         if (discos == null){
-            discos = new ArrayList<>();
-            discos.add(new disco("Horizonte Distante","Som Livre","10/08/2012"));
-            discos.add (new disco("Depois do Inverno","Som Livre","01/04/2005"));
-            discos.add(new disco("Angústia Suprema","Som Livre","15/06/2001"));
+         if (disco == null){
+            disco = new ArrayList<>();
+            disco.add(new disco("Horizonte Distante","Som Livre","10/08/2012"));
+            disco.add (new disco("Depois do Inverno","Som Livre","01/04/2005"));
+            disco.add(new disco("Angústia Suprema","Som Livre","15/06/2001"));
         }
-    return discos;
+        return disco;
     }
-        public static void adddisco(disco d) {
+    public static void adddisco(disco d){
         getdisco().add(d);
     }
-    public static void setdisco(int index,disco d) {
+    public static void setdisco(int index,disco d){
         getdisco().set(index, d);
     }
     public static void removedisco(int index){
