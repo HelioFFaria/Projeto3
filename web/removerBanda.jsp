@@ -35,7 +35,11 @@ if(request.getParameter("Cancelar")!=null){
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <% banda banda = dbBanda.getBanda().get(index);%>
             <form>
-               
+                <div>
+                    Indice: <br/>
+                    <%=index%> <br/>
+                    <input type="hidden" name="index" value="<%=index%>"/>
+                </div>
                 <div>
                     Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span style="color: #8219ab"><%=banda.getNome()%></span>

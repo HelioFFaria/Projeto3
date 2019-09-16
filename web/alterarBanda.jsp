@@ -41,6 +41,11 @@
                     <%banda banda = dbBanda.getBanda().get(index);%>            
             <form>
                 <div>
+                    Indice: <br/>
+                    <%=index%> <br/>
+                    <input type="hidden" name="index" value="<%=index%>"/>
+                </div>
+                <div>
                     Nome:<br/>
                     <input type="text" name="Nome" required style="color: #8219ab; padding: 5px;" value="<%=banda.getNome()%>"/>
                 </div><br/>

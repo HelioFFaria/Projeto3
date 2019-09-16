@@ -32,6 +32,11 @@
                     <% musica musica = dbMusica.getMusica().get(index);%>
             <form>
                 <div>
+                    Indice:
+                    <%=index%> 
+                    <input type="hidden" name="index" value="<%=index%>"/>
+                </div>
+                <div>
                     Nome: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span style="color: #8219ab"><%=musica.getNome()%></span>
                 </div><br/>

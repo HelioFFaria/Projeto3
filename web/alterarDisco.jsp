@@ -39,16 +39,21 @@
                     <%disco disco = dbDisco.getdisco().get(index);%>            
             <form>
                 <div>
+                    Índice:<br/>
+                    <%=index%><br/>
+                    <input type="hidden" name="index" value="<%=index%>"/>
+                </div>
+                <div>
                     Nome:<br/>
-                    <input type="text" name="Nome Disco" required style="color: #8219ab; padding: 5px;" value="<%=disco.getNomeDisco()%>"/>
+                    <input type="text" name="nomeDisco" required style="color: #8219ab; padding: 5px;" value="<%=disco.getNomeDisco()%>"/>
                 </div><br/>
                 <div>
                     Gravadora:<br/>
-                    <input type="text" name="Nome Gravadora" required style="color: #8219ab; padding: 5px;" value=" <%=disco.getNomeGravadora()%>"/>
+                    <input type="text" name="nomeGravadora" required style="color: #8219ab; padding: 5px;" value="<%=disco.getNomeGravadora()%>"/>
                 </div><br/>
                 <div>
                     Lançamento:<br/>
-                    <input type="text" name="Data Lançamento" required style="color: #8219ab; padding: 5px;" value=" <%=disco.getDataDisco()%>"/>
+                    <input type="text" name="dataDisco" required style="color: #8219ab; padding: 5px;" value="<%=disco.getDataDisco()%>"/>
                 </div><br/><br/>
 
                 <input class="btn-custom" type="submit" name="set" value="Alterar"/><br/><br/>

@@ -36,6 +36,11 @@
                     <% disco disco = dbDisco.getdisco().get(index);%>
             <form>
                 <div>
+                    <Índice: <br/>
+                    <%=index%> <br/>
+                    <input type="hidden" name="index" value="<%=index%>"/>
+                </div>
+                <div>
                     Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span style="color: #8219ab"><%=disco.getNomeDisco()%></span>
                 </div><br/>
