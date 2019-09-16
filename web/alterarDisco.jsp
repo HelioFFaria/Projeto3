@@ -32,26 +32,26 @@
         <div>
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
-        <div>
-            <h1><center>Alterar Disco</center></h1>
+        <div class="container1">
+            <h4><center><br/>Alterar Álbum</center></h4><br/>
                     <%try {%>
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <%disco disco = dbDisco.getdisco().get(index);%>            
             <form>
-                <center>
-                    Índice:<br/>
-                    <%=index%><br/>
-                    <input type="hidden" name="index" value="<%=index%>"/>
-                    Nome Disco:<br/>
-                    <input type="text" name="Nome Disco" value="<%=disco.getNomeDisco()%>"/><br/>
-                    Nome Gravadora:<br/>
-                    <input type="text" name="Nome Gravadora" value="<%=disco.getNomeGravadora()%>"/><br/>
-                    Data Lançamento:<br/>
-                    <input type="text" name="Data Lançamento" value="<%=disco.getDataDisco()%>"/><br/><br/>
+                <div>
+                    Nome:<br/>
+                    <input type="text" name="Nome Disco" required style="color: #8219ab; padding: 5px;" value="<%=disco.getNomeDisco()%>"/>
+                </div><br/>
+                <div>
+                    Gravadora:<br/>
+                    <input type="text" name="Nome Gravadora" required style="color: #8219ab; padding: 5px;" value=" <%=disco.getNomeGravadora()%>"/>
+                </div><br/>
+                <div>
+                    Lançamento:<br/>
+                    <input type="text" name="Data Lançamento" required style="color: #8219ab; padding: 5px;" value=" <%=disco.getDataDisco()%>"/>
+                </div><br/><br/>
 
-                    <input type="submit" name="Cancelar" value ="Cancelar"/>  
-                    <input type="submit" name="set" value="Alterar"/><br/>
-                </center>
+                <input class="btn-custom" type="submit" name="set" value="Alterar"/><br/><br/>
             </form>
             <%} catch (Exception ex) {%>
             <h3><center>Erro ao processar formulario</center></h3>

@@ -20,7 +20,7 @@ if(request.getParameter("Cancelar")!=null){
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Remover Bandas</title>
+        <title>Remover Banda</title>
         <link rel="shortcut icon" href="img/play.svg">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -30,26 +30,28 @@ if(request.getParameter("Cancelar")!=null){
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
         <div class="container1">
-            <h1><center>Remover Banda</center></h1>
+            <h4><center><br/>Remover Banda</center></h4><br/>
                     <%try {%>
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <% banda banda = dbBanda.getBanda().get(index);%>
             <form>
-                <center>
-                    Indice: <br/>
-                    <%=index%> <br/>
-                    <input type="hidden" name="index" value="<%=index%>"/>
-                    Nome:<br/>
-                    <input type="text" name="nome" value="<%=banda.getNome()%>"/><br/>
-                    Genero:<br/>
-                    <input type="text" name="nome" value="<%=banda.getGenero()%>"/><br/>
-                    Ano:<br/>
-                    <input type="text" name="nome" value="<%=banda.getAno()%>"/><br/><br/>
+               
+                <div>
+                    Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=banda.getNome()%></span>
+                </div><br/>
+                <div>
+                    Genero:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=banda.getGenero()%></span>
+                </div><br/>
+                <div>
+                    Ano:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=banda.getAno()%></span>
+                </div><br/><br/>
 
-                    <input type="submit" name="remove" value=" Remover"/><br/><br/>
-                    <input type="submit" name="Cancelar" value ="Cancelar"/>
+                    <input class="btn-custom" type="submit" name="remove" value=" Remover"/><br/><br/>
 
-                </center>        
+                     
             </form>
             <%} catch (Exception ex) {%>
             <h3> Erro ao processar formulario</h3>

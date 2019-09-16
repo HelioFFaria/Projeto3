@@ -10,17 +10,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
- if(request.getParameter("Cancelar")!=null){
-     response.sendRedirect("listaDeBandas.jsp");
- }
- if(request.getParameter("set")!=null){
-     int index = Integer.parseInt(request.getParameter("index"));
-     String nome = request.getParameter("Nome");
-     String genero = request.getParameter("Genero");
-     String Ano = request.getParameter("Ano");
-     dbBanda.getBanda().set(index, new banda(nome,genero,Ano));
-     response.sendRedirect("listaDeBandas.jsp");   
- }
+    if (request.getParameter("Cancelar") != null) {
+        response.sendRedirect("listaDeBandas.jsp");
+    }
+    if (request.getParameter("set") != null) {
+        int index = Integer.parseInt(request.getParameter("index"));
+        String nome = request.getParameter("Nome");
+        String genero = request.getParameter("Genero");
+        String Ano = request.getParameter("Ano");
+        dbBanda.getBanda().set(index, new banda(nome, genero, Ano));
+        response.sendRedirect("listaDeBandas.jsp");
+    }
 %>
 <html>
     <head>
@@ -35,27 +35,26 @@
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
         <div class="container1">
-            <h1><center>Alterar Banda</center></h1>
+            <h4><center><br/>Alterar Banda</center></h4><br/>
                     <%try {%>
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <%banda banda = dbBanda.getBanda().get(index);%>            
             <form>
-                <center>
-                    <br>
-                    Indice: <br/>
-                    <%=index%> <br/>
-                    <input type="hidden" name="index" value="<%=index%>"/>
+                <div>
                     Nome:<br/>
-                    <input type="text" name="Nome" value=" <%=banda.getNome()%>"/><br/>
-                    Genero:<br/>
-                    <input type="text" name="Genero" value="<%=banda.getGenero()%>"/><br/>
+                    <input type="text" name="Nome" required style="color: #8219ab; padding: 5px;" value="<%=banda.getNome()%>"/>
+                </div><br/>
+                <div>
+                    Gênero:<br/>
+                    <input type="text" name="Genero" required style="color: #8219ab; padding: 5px;" value="<%=banda.getGenero()%>"/>
+                </div><br/>
+                <div>
                     Ano:<br/>
-                    <input type=" text" name="Ano" value="<%=banda.getAno()%>"/><br/><br/>
+                    <input type=" text" name="Ano" required style="color: #8219ab; padding: 5px;" value="<%=banda.getAno()%>"/>
+                </div><br/><br/>
 
-                    <input type="submit" name="set" value="Alterar"/><br/><br/>
-                    <input type="submit" name="Cancelar" value ="Cancelar"/>  
+                <input class="btn-custom" type="submit" name="set" value="Alterar"/><br/><br/> 
 
-                </center>      
             </form>
             <%} catch (Exception ex) {%>
             <h3> Erro ao processar formulario</h3>

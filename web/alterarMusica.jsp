@@ -3,17 +3,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
- if(request.getParameter("Cancelar")!=null){
-     response.sendRedirect("listaDeMusica.jsp");
- }
- if(request.getParameter("set")!=null){
-     int index = Integer.parseInt(request.getParameter("index"));
-     String nome = request.getParameter("Nome");
-     String genero = request.getParameter("Genero");
-     String Ano = request.getParameter("Ano");
-     dbMusica.getMusica().set(index, new musica(nome,genero,Ano));
-     response.sendRedirect("listaDeMusica.jsp");   
- }
+    if (request.getParameter("Cancelar") != null) {
+        response.sendRedirect("listaDeMusica.jsp");
+    }
+    if (request.getParameter("set") != null) {
+        int index = Integer.parseInt(request.getParameter("index"));
+        String nome = request.getParameter("Nome");
+        String genero = request.getParameter("Genero");
+        String Ano = request.getParameter("Ano");
+        dbMusica.getMusica().set(index, new musica(nome, genero, Ano));
+        response.sendRedirect("listaDeMusica.jsp");
+    }
 %>
 <html>
     <head>
@@ -28,27 +28,28 @@
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
         <div class="container1">
-            <h1><center>Alterar musica</center></h1>
+            <h4><center><br/>Alterar Música</center></h4><br/>
                     <%try {%>
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <%musica musica = dbMusica.getMusica().get(index);%>            
             <form>
-                <center>
-                    <br>
-                    Indice: <br/>
-                    <%=index%> <br/>
-                    <input type="hidden" name="index" value="<%=index%>"/>
+
+                <div> 
                     Nome:<br/>
-                    <input type="text" name="Nome" value=" <%=musica.getNome()%>"/><br/>
-                    Genero:<br/>
-                    <input type="text" name="Genero" value="<%=musica.getGenero()%>"/><br/>
+                    <input type="text" name="Nome"  required style="color: #8219ab; padding: 5px;" value="<%=musica.getNome()%>"/>
+                </div><br/>
+                <div>
+                    Gênero:<br/>
+                    <input type="text" name="Genero" required style="color: #8219ab; padding: 5px;" value="<%=musica.getGenero()%>"/>
+                </div><br/>
+                <div>
                     Ano:<br/>
-                    <input type=" text" name="Ano" value="<%=musica.getAno()%>"/><br/><br/>
+                    <input type=" text" name="Ano" required style="color: #8219ab; padding: 5px;" value="<%=musica.getAno()%>"/>
+                </div><br/><br/>
 
-                    <input type="submit" name="set" value="Alterar"/><br/><br/>
-                    <input type="submit" name="Cancelar" value ="Cancelar"/>  
+                <input class="btn-custom" type="submit" name="set" value="Alterar"/><br/><br/>
 
-                </center>      
+
             </form>
             <%} catch (Exception ex) {%>
             <h3> Erro ao processar formulario</h3>

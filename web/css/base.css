@@ -8,6 +8,16 @@
     src: local(Gotham-Thin), url(../font/Gotham-Thin.otf)
 }
 
+h3, h4 {
+    text-align: center; 
+    font-family: Gotham-Light !important;
+}
+
+html, body {
+  height: 100%;
+  font-family: Gotham-Light !important;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -56,9 +66,9 @@ span{
 }
 
 .module-border-wrap {
-    border-style: solid;
-    border-image: linear-gradient(135deg, #8219ab 0%, #e10a0a 110%) 1;
-    border-width: 3px; 
+    border-style: solid !important;
+    border-image: linear-gradient(135deg, #8219ab 0%, #e10a0a 110%) 1 !important;
+    border-width: 1px !important; 
 }
 
 .footer {
@@ -68,6 +78,7 @@ span{
     color: white;
     font-size: 12px;
     text-decoration: none;
+    text-align: center;
     font-family: Gotham-Light !important;
 }
 
@@ -75,4 +86,65 @@ span{
     font-size: 12px;
     text-decoration: none;
     font-family: Gotham-Light !important;
+}
+
+table {
+    width: 100%;
+    background:#fff !important;
+    display: table;
+    border: 2px solid white;
+    border-spacing: 2px;
+    border: none !impotant;
+}
+
+thead {
+    background-color:  #8219ab;
+}
+
+thead th {
+    font-family: Gotham-Light !important;
+    font-size:1.1em;
+    font-weight:400;
+    color:#fff;
+    text-align: center;
+    padding:10px;
+}
+
+tbody td {
+    font-family: Gotham-Light !important;
+    font-size: .9em;
+    font-weight:400;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: .5%;
+}
+
+tbody td.1 {
+    text-align: center !important;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.btn-custom {
+    background-color: #8219ab;
+    cursor: pointer;
+    color: #fff;
+    border: #8219ab;
+    bottom: 15px;
+    height: 2em !important;
+    text-align: center;
+    padding: 1px, 15px, 3px, 2px;
+}
+
+.btn-custom:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #8219ab;
+    border: 1px solid #8219ab;
+    bottom: 15px;
+    height: 2em !important;
+    transition: 0.3s;
+    text-align: center;
+    padding: 1px, 15px, 3px, 2px;
 }

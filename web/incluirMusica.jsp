@@ -3,16 +3,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
- if(request.getParameter("cancelar")!=null){
-     response.sendRedirect("listaDeMusica.jsp");
- }
- if(request.getParameter("add")!=null){
-     String nome = request.getParameter("Nome");
-     String genero = request.getParameter("Genero");
-     String Ano = request.getParameter("Ano");
-     dbMusica.getMusica().add(new musica(nome,genero,Ano));
-     response.sendRedirect("listaDeMusicas.jsp");   
- }
+    if (request.getParameter("cancelar") != null) {
+        response.sendRedirect("listaDeMusica.jsp");
+    }
+    if (request.getParameter("add") != null) {
+        String nome = request.getParameter("Nome");
+        String genero = request.getParameter("Genero");
+        String Ano = request.getParameter("Ano");
+        dbMusica.getMusica().add(new musica(nome, genero, Ano));
+        response.sendRedirect("listaDeMusicas.jsp");
+    }
 %>
 
 <html>
@@ -28,19 +28,23 @@
         <div>
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
-        <div class="container1">
-            <h1><center>Cadastro de musica</center></h1>
-            <h2> <center>Incluir musica </center></h2>
+        <div class="container1"><br/>
+            <h4><center>Cadastro de musica</center></h4><br/>
+
             <form>
-                <center>
+                <div>
                     Nome:<br/>
-                    <input type="text" name="Nome"/><br/>
+                    <input type="text" name="Nome"/>
+                </div><br/>
+                <div>
                     Genero:<br/>
-                    <input type="text" name="Genero"/><br/>
+                    <input type="text" name="Genero"/>
+                </div><br/>
+                <div>
                     Ano:<br/>
-                    <input type="text" name="Ano"/> <br/><br/>
-                    <input type="submit" name="add" value="Incluir"/><br/><br/>
-                    <input type="submit" name="cancelar" value="Cancelar"/>      
+                    <input type="text" name="Ano"/> 
+                </div><br/><br/>
+                <input class="btn-custom" type="submit" name="add" value="Cadastrar"/><br/><br/>    
                 </center>   
             </form><br/><br/> 
         </div>

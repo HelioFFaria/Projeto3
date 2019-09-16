@@ -32,20 +32,23 @@
         <div>
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
-        <div class="container1">
-            <h1><center>Cadastro de Banda</center></h1>
-            <h2> <center>Incluir Banda </center></h2>
-            <form><center>
-                    Nome:<br/>
-                    <input type="text" name="Nome"/><br/>
+        <div class="container1"><br/>
+            <h4><center>Cadastar de Banda</center></h4><br/>
+            
+            <form>
+                    <div>
+                    <labe>Nome:</labe><br/>
+                    <input type="text" name="Nome"/>
+                    </div><br/>
+                    <div>
                     Genero:<br/>
-                    <input type="text" name="Genero"/><br/>
+                    <input type="text" name="Genero"/>
+                    </div><br/>
+                    <div>
                     Ano:<br/>
-                    <input type="text" name="Ano"/> <br/><br/>
-                    <input type="submit" name="add" value="Incluir"/><br/><br/>
-                    <input type="submit" name="cancelar" value="Cancelar"/>      
-
-                </center>   
+                    <input type="text" name="Ano"/> 
+                    </div><br/><br/>
+                    <input class="btn-custom" type="submit" name="add" value="Cadastrar"/><br/><br/>        
             </form><br/><br/> 
         </div>
         <footer class="footer">

@@ -22,7 +22,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Incluir Álbum</title>
         <link rel="shortcut icon" href="img/play.svg">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -31,20 +31,24 @@
         <div>
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
-        <div>
-            <h1><center>Incluir Disco</center></h1>
+        <div class="container1"><br/>
+            <h4><center>Cadastrar Álbum</center></h4><br/>
             <form>
-                <center>
-
+                
+                    <div>
                     Nome:<br/>
-                    <input type="text" name="nomeDisco"/><br/>
+                    <input type="text" name="nomeDisco"/>
+                    </div><br/>
+                    <div>
                     Gravadora:<br/>
-                    <input type="text" name="nomeGravadora"/><br/>
+                    <input type="text" name="nomeGravadora"/>
+                    </div><br/>
+                    <div>
                     Data Lançamento:<br/>
-                    <input type="text" name="dataDisco"/><br/></br>
-                    <input type="submit" name="cancelar" value="Cancelar"/><br/></br>
-                    <input type="submit" name="add" value="Incluir"/>
-                </center>
+                    <input type="text" name="dataDisco"/>
+                    </div><br/></br>
+                    <input class="btn-custom" type="submit" name="add" value="Cadastrar"/><br/></br>
+                
             </form>
         </div>
         <footer class="footer">

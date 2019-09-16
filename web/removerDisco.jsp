@@ -20,7 +20,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Remover Álbum</title>
         <link rel="shortcut icon" href="img/play.svg">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,25 +29,26 @@
         <div>
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
-        <div>
-            <h1><center>Remover Disco</center></h1>
+        <div class="container1">
+            <h4><center><br/>Remover Álbum</center></h4><br/>
                     <%try {%>
                     <%int index = Integer.parseInt(request.getParameter("index"));%>
                     <% disco disco = dbDisco.getdisco().get(index);%>
             <form>
-                <center>
-                    Índice: <br/>
-                    <%=index%> <br/>
-                    <input type="hidden" name="index" value="<%=index%>"/>
-                    Nome Disco:<br/>
-                    <input type="text" name="nome" value="<%=disco.getNomeDisco()%>"/><br/>
-                    Nome Gravadora:<br/>
-                    <input type="text" name="nome" value="<%=disco.getNomeGravadora()%>"/><br/>
-                    Data Lançamento:<br/>
-                    <input type="text" name="nome" value="<%=disco.getDataDisco()%>"/><br/><br/>
+                <div>
+                    Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=disco.getNomeDisco()%></span>
+                </div><br/>
+                <div>
+                    Gravadora:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=disco.getNomeGravadora()%></span>
+                </div><br/>
+                <div>
+                    Lançamento:&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: #8219ab"><%=disco.getDataDisco()%></span>
+                </div><br/><br/>
 
-                    <input type="submit" name="remove" value=" Remover"/><br/><br/>
-                    <input type="submit" name="Cancelar" value ="Cancelar"/></center> 
+                <input class="btn-custom" type="submit" name="remove" value=" Remover"/><br/><br/>
             </form>
             <%} catch (Exception ex) {%>
             <h3><center>Erro ao processar formulário</center></h3>

@@ -18,4 +18,9 @@
             <a class="nav-item nav-link" href="listaDeMusicas.jsp">Músicas</a>
         </div>
     </div>
+    <div class="ml-auto p-2 bd-highlight"><br/><br/>
+        <a class="navbar-brand" href="home.jsp">
+            <img src="img/play.svg" width="80" height="80" alt="">&nbsp;&nbsp;  
+        </a>
+    </div>
 </div>
