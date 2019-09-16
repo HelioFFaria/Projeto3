@@ -16,7 +16,7 @@
         String nomeDisco = request.getParameter("nomeDisco");
         String nomeGravadora = request.getParameter("nomeGravadora");
         String dataDisco = request.getParameter("dataDisco");
-        dbDisco.getdisco().set(index, new disco("nomeDisco", "nomeGravadora", "dataDisco"));
+        dbDisco.getdisco().set(index, new disco(nomeDisco, nomeGravadora, dataDisco));
         response.sendRedirect("listaDeDiscos.jsp");
     }
 %>

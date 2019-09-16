@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <%
     if (request.getParameter("Cancelar") != null) {
-        response.sendRedirect("listaDeMusica.jsp");
+        response.sendRedirect("listaDeMusicas.jsp");
     }
     if (request.getParameter("set") != null) {
         int index = Integer.parseInt(request.getParameter("index"));
@@ -12,7 +12,7 @@
         String genero = request.getParameter("Genero");
         String Ano = request.getParameter("Ano");
         dbMusica.getMusica().set(index, new musica(nome, genero, Ano));
-        response.sendRedirect("listaDeMusica.jsp");
+        response.sendRedirect("listaDeMusicas.jsp");
     }
 %>
 <html>
