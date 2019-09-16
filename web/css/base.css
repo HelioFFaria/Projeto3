@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Gotham-Light;
+    src: local(Gotham-Light), url(../font/Gotham-Light.otf)
+}
+
+@font-face {
+    font-family: Gotham-Thin;
+    src: local(Gotham-Thin), url(../font/Gotham-Thin.otf)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+} 
+
+span{
+    color: #000;
+}
+
+.nav-link{
+    color: white !important;
+    font-family: Gotham-Light !important;
+}
+
+.container1 {
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 0;
+    flex: 1 0 auto;
+    word-wrap: break-word;
+}
+
+.container2 {
+    margin: 10px 20px;
+    padding: 0 0;   
+}
+
+.sbase{
+    font-size: 13px; 
+    font-family: Gotham-Light; 
+    font-weight: bold; color: #8219ab; 
+    text-align: center !important;
+}
+
+.avatar {
+    height: 80px;
+    border-radius: 50%;
+    margin: 0px 10px 10px 0 !important;
+}
+
+.avatar1 {
+    height: 150px;
+    border-radius: 50%;
+    margin: 0px 10px 10px 0 !important;
+}
+
+.module-border-wrap {
+    border-style: solid;
+    border-image: linear-gradient(135deg, #8219ab 0%, #e10a0a 110%) 1;
+    border-width: 3px; 
+}
+
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #3c4043;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Gotham-Light !important;
+}
+
+.footer p{
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Gotham-Light !important;
+}

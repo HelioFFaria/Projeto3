@@ -18,24 +18,34 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Incluir musica</title>
-        
+        <title>Incluir Música</title>
+        <link rel="shortcut icon" href="img/play.svg">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
     </head>
     <body>
-        <h1><center>Cadastro de musica</center></h1>
-        <h2> <center>Incluir musica </center></h2>
-        <form><center>
-            Nome:<br/>
-            <input type="text" name="Nome"/><br/>
-            Genero:<br/>
-            <input type="text" name="Genero"/><br/>
-            Ano:<br/>
-            <input type="text" name="Ano"/> <br/><br/>
-            <input type="submit" name="add" value="Incluir"/><br/><br/>
-            <input type="submit" name="cancelar" value="Cancelar"/>      
-             
-            </center>   
-        </form><br/><br/>              
-
+        <div>
+            <%@include file="WEB-INF/jspf/header.jspf" %>
+        </div>
+        <div class="container1">
+            <h1><center>Cadastro de musica</center></h1>
+            <h2> <center>Incluir musica </center></h2>
+            <form>
+                <center>
+                    Nome:<br/>
+                    <input type="text" name="Nome"/><br/>
+                    Genero:<br/>
+                    <input type="text" name="Genero"/><br/>
+                    Ano:<br/>
+                    <input type="text" name="Ano"/> <br/><br/>
+                    <input type="submit" name="add" value="Incluir"/><br/><br/>
+                    <input type="submit" name="cancelar" value="Cancelar"/>      
+                </center>   
+            </form><br/><br/> 
+        </div>
+        <footer class="footer">
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
+        </footer>
     </body>
 </html>

@@ -1,3 +1,21 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<h4>Desenvolvido por: Alex Vaz, Helio Faria, Julio Cesar e Tales Parisotto </h4>
+<div class="d-flex bd-highlight mb-3 container2">
+    <div class="p-2 bd-highlight">
+        <p>Desenvolvido por<p>
+        <p class="b">Alex Vaz</p>
+        <p class="b">Helio Faria</p>
+        <p class="b">Julio Takeda</p>
+        <p class="b">Tales Parisotto</p>        
+    </div>
+    <div class="p-2 bd-highlight"></div>
+    <div class="p-2 bd-highlight">
+        <p>Serviços</p>
+        <div>
+            <a class="nav-item nav-link" href="home.jsp">Home</a>
+            <a class="nav-item nav-link" href="listaDeBandas.jsp">Bandas</a>
+            <a class="nav-item nav-link" href="listaDeDiscos.jsp">Álbuns</a>
+            <a class="nav-item nav-link" href="listaDeMusicas.jsp">Músicas</a>
+        </div>
+    </div>
+</div>

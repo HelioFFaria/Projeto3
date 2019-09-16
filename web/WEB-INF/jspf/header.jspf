@@ -1,3 +1,14 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<h2><center>Projeto 03 - Cadastro de Bandas, Discos e Músicas</center></h2>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="home.jsp">
+        <img src="img/play.svg" width="30" height="30" alt="">&nbsp;&nbsp;  
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="listaDeBandas.jsp">BANDAS</a>
+        <a class="nav-item nav-link" href="listaDeDiscos.jsp">ÁLBUNS</a>
+        <a class="nav-item nav-link" href="listaDeMusicas.jsp">MÚSICAS</a>
+      </div>
+    </div>
+</nav>
