@@ -3,7 +3,7 @@
     Created on : 12/09/2019, 21:09:23
     Author     : helio
 --%>
-<%@page import="br.com.fatecpg.projeto3.disco" %>
+<%@page import="br.com.fatecpg.projeto3.disco"%>
 <%@page import="br.com.fatecpg.projeto3.dbDisco" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,6 +20,9 @@
                 <th>Disco</th>
                 <th>Gravadora</th>
                 <th>Data Lançamento</th>
+                <th>Alterar Disco</th>
+                <th>Remover Disco</th>
+                <th>Incluir Disco</th>
             </tr>
             <% for(disco disco: dbDisco.getdisco()){%>
             <tr>
@@ -27,12 +30,13 @@
                 <td><%=disco.getNomeDisco()%></td>
                 <td><%=disco.getNomeGravadora()%></td>
                 <td><%=disco.getDataDisco()%></td>
+                <td><a href="alterarDisco.jsp?index=<%=dbDisco.getdisco().indexOf(disco)%>">Alterar Disco</a></td>
+                <td><a href="removerDisco.jsp?index=<%=dbDisco.getdisco().indexOf(disco)%>">Remover Disco</a></td>
+                <td><a href="incluirDisco.jsp">Incluir Disco</a></td>
             </tr>
             <%}%>
         </table>
-        <a href="incluirDisco.jsp"><h3>Incluir Disco</h3></a>
-        <a href="alterarDisco.jsp"><h3>Alterar Disco</h3></a>
-        <a href="removerDisco.jsp"><h3>Remover Disco</h3></a><br/>
-        <a href="home.jsp"><h2>Home</h2></a><br/>
+        <br/>
+        <a href="home.jsp"><h3>Home</h3></a>
     </body></center>
 </html>

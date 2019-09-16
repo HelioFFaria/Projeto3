@@ -25,6 +25,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar Disco</title>
     </head>
+    <body>
         <h1><center>Alterar Disco</center></h1>
         <%try{%>
         <%int index = Integer.parseInt(request.getParameter("index"));%>
@@ -39,10 +40,12 @@
            <input type="text" name="Nome Gravadora" value="<%=disco.getNomeGravadora()%>"/><br/>
            Data Lançamento:<br/>
            <input type="text" name="Data Lançamento" value="<%=disco.getDataDisco()%>"/><br/><br/>
+           
            <input type="submit" name="Cancelar" value ="Cancelar"/>  
            <input type="submit" name="set" value="Alterar"/><br/>
         </form></center>
            <%}catch(Exception ex){%>
            <h3><center>Erro ao processar formulario</center></h3>
         <%}%>
+    </body>
 </html>

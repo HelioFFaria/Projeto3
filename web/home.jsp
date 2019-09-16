@@ -4,16 +4,23 @@
     Author     : helio
 --%>
 
+
+
+<%@page import="br.com.fatecpg.projeto3.dbDisco"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
+    <%@include file="WEB-INF/jspf/header.jspf"%>
     </head>
-    <body>
+    <body><center>
         <h1>Listas</h1>
-        <a href="listaDeDiscos.jsp">Lista de Discos</a>
-        <a href="listaDeBandas.jsp">Lista de Bandas</a>
-    </body>
+        <a href="listaDeBandas.jsp">Lista de Bandas</a><br/><br/>
+        <a href="listaDeDiscos.jsp">Lista de Discos</a><br/><br/>
+        <a href="listaDeMusicas.jsp">Lista de Músicas</a><br/><br/><br/><br/><br/>
+        
+        <%@include file="WEB-INF/jspf/footer.jspf"%>
+    </body></center>
 </html>

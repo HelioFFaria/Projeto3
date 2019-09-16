@@ -15,14 +15,15 @@
     </head>
     <body>
                 <h1><center>Bandas</center></h1>
-    <center><table border ="1">
+    <center><table  border ="1">
             <tr>
                 <th>Índice</th>
                 <th>Nome</th>
                 <th>Genero</th>
                 <th>Ano</th>
-                <th>Alterar </th>
-                <th>Remover </th>
+                <th>Alterar</th>
+                <th>Remover</th>
+                <th>Incluir</th>
             </tr>
             <% for(banda banda: dbBanda.getBanda()){%>
             <tr>
@@ -32,14 +33,13 @@
                 <td><%=banda.getAno()%></td>
                 <td><a href="alterarBanda.jsp?index=<%=dbBanda.getBanda().indexOf(banda)%>">Alterar</a></td>
                 <td><a href="removerBanda.jsp?index=<%=dbBanda.getBanda().indexOf(banda)%>">Remover</a></td>
-               
+                <td><a href="incluirBanda.jsp">Incluir</a></td> 
             </tr>
             <%}%>
-            
         </table></center>
     <center> <br/><br/>         
         <h3> <a href="home.jsp">Home</a> </h3>
-        <h3><a href="incluirBanda.jsp">Incluir</a> </h3>             
+                    
     </center>
 
     </body>
