@@ -7,7 +7,8 @@
 <%@page import="br.com.fatecpg.projeto3.dbDisco" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<% if (request.getParameter("cancelar")!= null){
+<%
+   if (request.getParameter("cancelar")!= null){
     response.sendRedirect("listaDeDiscos.jsp");
    }
    if (request.getParameter("add")!= null){
@@ -24,16 +25,17 @@
         <title>Incluir Disco</title>
     </head>
     <body>
-        <h1>Incluir Disco</h1>
-        <form>
+        <h1><center>Incluir Disco</center></h1>
+        <form><center>
+            
             Nome:<br/>
             <input type="text" name="nomeDisco"/><br/>
             Gravadora:<br/>
             <input type="text" name="nomeGravadora"/><br/>
             Data Lançamento:<br/>
-            <input type="text" name="dataDisco"/><br/>
-            <input type="submit" name="cancelar" value="Cancelar"/>
+            <input type="text" name="dataDisco"/><br/></br>
+            <input type="submit" name="cancelar" value="Cancelar"/><br/></br>
             <input type="submit" name="add" value="Incluir"/>
-        </form>
+            <form></center>
     </body>
 </html>
